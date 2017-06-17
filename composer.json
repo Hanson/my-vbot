@@ -1,0 +1,11 @@
+{
+    "require": {
+        "hanson/vbot": "^2.0",
+        "vbot/guess-number": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hanson\\MyVbot\\": "./"
+        }
+    }
+}
