@@ -28,10 +28,6 @@ class MessageHandler
         /** @var Groups $groups */
         $groups = vbot('groups');
 
-        if ($message['type'] === 'touch') {
-            //            Text::send($message['raw']['ToUserName'], $message['content']);
-        }
-
         Hanson::messageHandler($message, $friends, $groups);
         ColleagueGroup::messageHandler($message, $friends, $groups);
         FeedbackGroup::messageHandler($message, $friends, $groups);
@@ -58,7 +54,7 @@ class MessageHandler
 
         if ($message['type'] === 'request_friend') {
             vbot('console')->log('收到好友申请:'.$message['info']['Content'].$message['avatar']);
-            if ($message['info']['Content'] === 'echo') {
+            if (in_array($message['info']['Content'], ['echo', 'print_r', 'var_dump', 'print'])) {
                 $friends->approve($message);
             }
         }

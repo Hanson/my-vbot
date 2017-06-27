@@ -4,6 +4,7 @@ namespace Hanson\MyVbot;
 
 use Hanson\Vbot\Foundation\Vbot as Bot;
 use Vbot\GuessNumber\GuessNumber;
+use Vbot\HotGirl\HotGirl;
 
 class Example
 {
@@ -26,7 +27,8 @@ class Example
 
         $robot->messageExtension->load([
             // some extensions
-            GuessNumber::class
+            GuessNumber::class,
+            HotGirl::class,
         ]);
 
         $robot->observer->setQrCodeObserver([Observer::class, 'setQrCodeObserver']);
