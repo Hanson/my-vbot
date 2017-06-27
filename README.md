@@ -7,3 +7,10 @@ Vbot 运行例子
 项目：https://github.com/HanSon/vbot
 
 文档：http://create.hanc.cc
+
+```php
+git clone https://github.com/HanSon/my-vbot.git
+cd my-vbot
+composer install
+php run.php
+```
