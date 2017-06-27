@@ -2,15 +2,16 @@
 
 namespace Hanson\MyVbot;
 
+use Hanson\MyVbot\Handlers\Contact\ColleagueGroup;
+use Hanson\MyVbot\Handlers\Contact\ExperienceGroup;
+use Hanson\MyVbot\Handlers\Contact\FeedbackGroup;
+use Hanson\MyVbot\Handlers\Contact\Hanson;
+use Hanson\MyVbot\Handlers\Type\RecallType;
+use Hanson\MyVbot\Handlers\Type\TextType;
 use Hanson\Vbot\Contact\Friends;
 use Hanson\Vbot\Contact\Groups;
 use Hanson\Vbot\Contact\Members;
-use Hanson\Vbot\Example\Handlers\Contact\ColleagueGroup;
-use Hanson\Vbot\Example\Handlers\Contact\ExperienceGroup;
-use Hanson\Vbot\Example\Handlers\Contact\FeedbackGroup;
-use Hanson\Vbot\Example\Handlers\Contact\Hanson;
-use Hanson\Vbot\Example\Handlers\Type\RecallType;
-use Hanson\Vbot\Example\Handlers\Type\TextType;
+
 use Hanson\Vbot\Message\Emoticon;
 use Hanson\Vbot\Message\Text;
 use Illuminate\Support\Collection;
