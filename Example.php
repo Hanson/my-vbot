@@ -3,6 +3,7 @@
 namespace Hanson\MyVbot;
 
 use Hanson\Vbot\Foundation\Vbot as Bot;
+use Vbot\Blacklist\Blacklist;
 use Vbot\GuessNumber\GuessNumber;
 use Vbot\HotGirl\HotGirl;
 
@@ -27,6 +28,7 @@ class Example
 
         $robot->messageExtension->load([
             // some extensions
+            Blacklist::class,
             GuessNumber::class,
             HotGirl::class,
         ]);

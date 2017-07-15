@@ -77,5 +77,18 @@ return [
             'remark'   => '',
             'nickname' => 'HanSon',
         ],
+        'blacklist' => [
+            'type' => [
+                'text', 'emoticon'
+            ],
+            'warn' => function ($message) {
+                $nickname = $message['fromType'] == 'Group' ? $message['sender']['NickName'] : $message['from']['NickName'];
+                \Hanson\Vbot\Message\Text::send($message['from']['UserName'], "@{$nickname} 警告！你的消息频率略高！");
+            },
+            'block' => function ($message) {
+                $nickname = $message['fromType'] == 'Group' ? $message['sender']['NickName'] : $message['from']['NickName'];
+                \Hanson\Vbot\Message\Text::send($message['from']['UserName'], "@{$nickname} 你已被永久拉黑！");
+            },
+        ]
     ],
 ];
