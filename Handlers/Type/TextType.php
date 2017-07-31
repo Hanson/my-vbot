@@ -16,7 +16,7 @@ class TextType
         if ($message['type'] === 'text') {
             if ($message['content'] === 'time') {
                 $datetime = Carbon::parse(vbot('config')->get('server.time'));
-                Text::send($message['from']['UserName'], 'Running:'.$datetime->hour.'小时');
+                Text::send($message['from']['UserName'], 'Running:'.$datetime->diffInHours().'小时');
             }
 
             if ($message['content'] === '拉我') {
