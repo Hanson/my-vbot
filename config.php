@@ -43,7 +43,7 @@ return [
      * 缓存配置项
      */
     'cache' => [
-        'default' => 'redis',
+        'default' => 'file',
         'stores'  => [
             'file' => [
                 'driver' => 'file',
